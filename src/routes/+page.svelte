@@ -10,26 +10,12 @@
   }
 </script>
 
-<main class="container">
-  <h1>Welcome to Print Assist</h1>
-
-  <div class="row">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo vite" alt="Vite Logo" />
-    </a>
-    <a href="https://tauri.app" target="_blank">
-      <img src="/tauri.svg" class="logo tauri" alt="Tauri Logo" />
-    </a>
-    <a href="https://kit.svelte.dev" target="_blank">
-      <img src="/svelte.svg" class="logo svelte-kit" alt="SvelteKit Logo" />
-    </a>
-  </div>
-  <p class="text-7xl">Built with Tauri, Vite, and SvelteKit.</p>
-
-  <form class="row" onsubmit={greet}>
+<main class="container flex flex-col justify-center items-center h-screen w-full bg-gray-100 space-y-12">
+  <h1 class="text-3xl">Welcome to Print Assist</h1>
+  <form class="flex justify-evenly space-x-4" onsubmit={greet}>
     <input id="greet-input" placeholder="Enter a name..." bind:value={name} />
-    <button type="submit">Greet</button>
+    <button type="submit" class="bg-gray-300 p-4">Greet</button>
   </form>
-  <p>{greetMsg}</p>
+  <p class="text-xl">{greetMsg}</p>
 </main>
 
